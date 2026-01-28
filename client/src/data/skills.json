@@ -1,0 +1,32 @@
+{
+  "skills": [
+    { "name": "Python", "keywords": ["pandas", "numpy", "python3"] },
+    { "name": "SQL", "keywords": ["postgres", "mysql", "sqlite", "queries"] },
+    { "name": "Data Analysis", "keywords": ["eda", "data cleaning", "analytics"] },
+    { "name": "Machine Learning", "keywords": ["scikit-learn", "model", "regression", "classification"] },
+    { "name": "Deep Learning", "keywords": ["tensorflow", "pytorch", "neural network"] },
+    { "name": "Statistics", "keywords": ["hypothesis", "p-value", "distribution", "bayesian"] },
+    { "name": "Data Visualization", "keywords": ["matplotlib", "seaborn", "tableau", "power bi"] },
+    { "name": "NLP", "keywords": ["natural language", "tokenization", "bert", "spacy"] },
+    { "name": "Computer Vision", "keywords": ["opencv", "cnn", "image classification"] },
+
+    { "name": "JavaScript", "keywords": ["js", "typescript", "es6"] },
+    { "name": "React", "keywords": ["reactjs", "hooks", "jsx"] },
+    { "name": "Node.js", "keywords": ["node", "express", "api"] },
+    { "name": "HTML", "keywords": ["html5", "semantic html"] },
+    { "name": "CSS", "keywords": ["css3", "tailwind", "sass"] },
+
+    { "name": "Git", "keywords": ["github", "gitlab", "version control"] },
+    { "name": "Docker", "keywords": ["containers", "dockerfile"] },
+    { "name": "CI/CD", "keywords": ["github actions", "pipeline", "deployment"] },
+
+    { "name": "Cloud", "keywords": ["aws", "gcp", "azure", "cloud"] },
+    { "name": "APIs", "keywords": ["rest", "graphql", "swagger"] },
+    { "name": "System Design", "keywords": ["scalability", "microservices", "architecture"] },
+    { "name": "Testing", "keywords": ["jest", "pytest", "unit testing"] },
+
+    { "name": "Communication", "keywords": ["stakeholder", "presentation", "collaboration"] },
+    { "name": "Leadership", "keywords": ["mentoring", "lead", "ownership"] },
+    { "name": "Problem Solving", "keywords": ["debugging", "root cause", "optimization"] }
+  ]
+}

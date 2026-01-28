@@ -1,0 +1,68 @@
+{
+  "domains": [
+    {
+      "name": "Data Science",
+      "requiredSkills": [
+        "Python",
+        "SQL",
+        "Data Analysis",
+        "Machine Learning",
+        "Statistics",
+        "Data Visualization",
+        "Git",
+        "Communication"
+      ]
+    },
+    {
+      "name": "Backend Engineering",
+      "requiredSkills": [
+        "Python",
+        "SQL",
+        "APIs",
+        "System Design",
+        "Testing",
+        "Cloud",
+        "Git",
+        "Problem Solving"
+      ]
+    },
+    {
+      "name": "Frontend Engineering",
+      "requiredSkills": [
+        "JavaScript",
+        "React",
+        "HTML",
+        "CSS",
+        "APIs",
+        "Git",
+        "Testing",
+        "Communication"
+      ]
+    },
+    {
+      "name": "ML Engineering",
+      "requiredSkills": [
+        "Python",
+        "Machine Learning",
+        "Deep Learning",
+        "Cloud",
+        "Docker",
+        "System Design",
+        "APIs",
+        "Problem Solving"
+      ]
+    },
+    {
+      "name": "Product Analytics",
+      "requiredSkills": [
+        "SQL",
+        "Data Analysis",
+        "Statistics",
+        "Data Visualization",
+        "Communication",
+        "Problem Solving",
+        "Leadership"
+      ]
+    }
+  ]
+}

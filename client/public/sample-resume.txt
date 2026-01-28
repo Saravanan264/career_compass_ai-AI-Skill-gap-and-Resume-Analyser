@@ -1,0 +1,25 @@
+JORDAN RIVERA
+Email: jordan.rivera@email.com | Phone: (555) 123-4567
+LinkedIn: linkedin.com/in/jordanrivera | GitHub: github.com/jrivera
+
+SUMMARY
+Product-minded Data Analyst with 3+ years of experience using Python, SQL, and data visualization to drive measurable business outcomes. Strong communicator, comfortable presenting to stakeholders.
+
+SKILLS
+Python (pandas, numpy), SQL (Postgres), Data Analysis (EDA, data cleaning), Statistics, Data Visualization (Tableau), Git, APIs (REST)
+
+EXPERIENCE
+Data Analyst — Northwind Labs
+- Improved weekly reporting speed by 35% by building a reusable SQL pipeline and automated dashboards.
+- Increased retention by 8% by analyzing churn drivers and partnering with product to launch targeted experiments.
+- Delivered a stakeholder-ready insights deck with clear charts and actionable recommendations.
+
+PROJECTS
+- Customer Churn Prediction: built a scikit-learn pipeline with feature engineering, cross-validation, and model evaluation.
+- Product Funnel Dashboard: created a Tableau-style dashboard and defined key product metrics.
+
+EDUCATION
+B.Sc. in Statistics, State University
+
+TOOLS
+Docker, GitHub Actions (CI/CD)

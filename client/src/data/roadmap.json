@@ -1,0 +1,222 @@
+{
+  "domains": {
+    "Data Science": {
+      "stages": [
+        {
+          "title": "Core Foundations",
+          "goal": "Build strong basics for data work.",
+          "duration": "2–3 weeks",
+          "skillTags": ["Python", "SQL", "Statistics"],
+          "courses": [
+            "Python for Data Analysis (pandas + numpy)",
+            "SQL Fundamentals (joins, windows)",
+            "Practical Statistics (confidence intervals)"
+          ],
+          "projects": [
+            "Clean & analyze a messy dataset",
+            "SQL mini-warehouse + dashboards"
+          ]
+        },
+        {
+          "title": "Modeling & Evaluation",
+          "goal": "Learn to train, validate, and interpret models.",
+          "duration": "3–4 weeks",
+          "skillTags": ["Machine Learning", "Data Analysis"],
+          "courses": [
+            "Machine Learning with scikit-learn",
+            "Feature engineering + model evaluation"
+          ],
+          "projects": [
+            "Customer churn prediction",
+            "Housing price regression with explainability"
+          ]
+        },
+        {
+          "title": "Portfolio & Communication",
+          "goal": "Show your work with clear storytelling.",
+          "duration": "2–3 weeks",
+          "skillTags": ["Data Visualization", "Communication"],
+          "courses": [
+            "Data viz best practices",
+            "Communicating insights to stakeholders"
+          ],
+          "projects": [
+            "Insight report with charts + narrative",
+            "Interactive dashboard (Tableau/Power BI style)"
+          ]
+        }
+      ]
+    },
+    "Backend Engineering": {
+      "stages": [
+        {
+          "title": "Backend Basics",
+          "goal": "Build APIs and think in systems.",
+          "duration": "2–3 weeks",
+          "skillTags": ["APIs", "Python", "SQL"],
+          "courses": [
+            "REST API design fundamentals",
+            "SQL for backend engineers"
+          ],
+          "projects": [
+            "CRUD API with validation",
+            "Auth + sessions mock (conceptual)"
+          ]
+        },
+        {
+          "title": "Testing & Reliability",
+          "goal": "Ship quality and confidence.",
+          "duration": "2–3 weeks",
+          "skillTags": ["Testing", "Problem Solving"],
+          "courses": ["Unit testing strategies", "Debugging & observability basics"],
+          "projects": [
+            "Test suite for your API",
+            "Load-test and fix bottlenecks"
+          ]
+        },
+        {
+          "title": "Scalability",
+          "goal": "Design for growth.",
+          "duration": "3–4 weeks",
+          "skillTags": ["System Design", "Cloud"],
+          "courses": ["System design essentials", "Cloud fundamentals"],
+          "projects": [
+            "Design doc for a scalable service",
+            "Deploy a simple service (conceptual)"
+          ]
+        }
+      ]
+    },
+    "Frontend Engineering": {
+      "stages": [
+        {
+          "title": "Modern Frontend Foundations",
+          "goal": "Build accessible UI fast.",
+          "duration": "2–3 weeks",
+          "skillTags": ["HTML", "CSS", "JavaScript"],
+          "courses": [
+            "Modern HTML semantics",
+            "CSS layout (flex/grid) + design systems",
+            "JavaScript fundamentals"
+          ],
+          "projects": [
+            "Landing page with strong layout",
+            "Component library mini-kit"
+          ]
+        },
+        {
+          "title": "React & State",
+          "goal": "Build real app screens.",
+          "duration": "3–4 weeks",
+          "skillTags": ["React", "APIs"],
+          "courses": [
+            "React hooks deep dive",
+            "Client data fetching patterns"
+          ],
+          "projects": [
+            "Dashboard with charts",
+            "Form-heavy flow with validation"
+          ]
+        },
+        {
+          "title": "Quality & Shipping",
+          "goal": "Test, optimize, and deliver.",
+          "duration": "2–3 weeks",
+          "skillTags": ["Testing", "Git"],
+          "courses": ["Testing UI", "Performance basics"],
+          "projects": [
+            "Add tests for critical flows",
+            "Performance audit + improvements"
+          ]
+        }
+      ]
+    },
+    "ML Engineering": {
+      "stages": [
+        {
+          "title": "ML Foundations",
+          "goal": "Build reliable ML pipelines.",
+          "duration": "3–4 weeks",
+          "skillTags": ["Machine Learning", "Python"],
+          "courses": [
+            "End-to-end ML pipeline",
+            "Model evaluation + monitoring"
+          ],
+          "projects": [
+            "Train + evaluate an ML model",
+            "Add drift checks (conceptual)"
+          ]
+        },
+        {
+          "title": "Serving & Systems",
+          "goal": "Deploy models behind APIs.",
+          "duration": "3–4 weeks",
+          "skillTags": ["APIs", "Docker", "Cloud"],
+          "courses": [
+            "Model serving patterns",
+            "Docker fundamentals",
+            "Cloud deployment basics"
+          ],
+          "projects": [
+            "API that serves predictions (conceptual)",
+            "Latency + throughput experiments"
+          ]
+        },
+        {
+          "title": "Deep Learning Specialization",
+          "goal": "Learn DL workflows if needed.",
+          "duration": "2–3 weeks",
+          "skillTags": ["Deep Learning"],
+          "courses": ["PyTorch basics", "Training tricks + debugging"],
+          "projects": [
+            "Image classifier",
+            "Text classifier (NLP)"
+          ]
+        }
+      ]
+    },
+    "Product Analytics": {
+      "stages": [
+        {
+          "title": "Analytics Foundations",
+          "goal": "Measure products with confidence.",
+          "duration": "2–3 weeks",
+          "skillTags": ["SQL", "Data Analysis"],
+          "courses": [
+            "Product metrics 101",
+            "SQL for analytics"
+          ],
+          "projects": [
+            "Metric tree for a product",
+            "Funnel analysis in SQL"
+          ]
+        },
+        {
+          "title": "Experimentation & Stats",
+          "goal": "Run A/B tests correctly.",
+          "duration": "3–4 weeks",
+          "skillTags": ["Statistics", "Problem Solving"],
+          "courses": [
+            "A/B testing fundamentals",
+            "Practical statistics for experiments"
+          ],
+          "projects": [
+            "Experiment design doc",
+            "Analyze an A/B test dataset"
+          ]
+        },
+        {
+          "title": "Storytelling",
+          "goal": "Make insights understandable.",
+          "duration": "2–3 weeks",
+          "skillTags": ["Data Visualization", "Communication"],
+          "courses": ["Data storytelling", "Dashboard best practices"],
+          "projects": [
+            "Weekly insights report",
+            "Stakeholder presentation deck"
+          ]
+        }
+      ]
+    }
+  }
+}
