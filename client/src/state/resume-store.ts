@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 export type AtsSectionScores = {
   format: number;
@@ -27,6 +28,10 @@ export type RoadmapStage = {
   duration: string;
   courses: string[];
   projects: string[];
+  status?: "Not Started" | "In Progress" | "Completed" | "Needs Review";
+  priority?: "High" | "Medium" | "Low";
+  explanation?: string;
+  focusSkills?: string[];
 };
 
 export type FinalScoreMetric = {
@@ -42,6 +47,8 @@ export type FinalScorecard = {
 };
 
 export type ResumeAnalysis = {
+  isValidResume?: boolean;
+  validationReason?: string;
   ats: AtsAnalysis;
   skillsDetected: string[];
   domains: Record<string, DomainFit>;
@@ -49,6 +56,7 @@ export type ResumeAnalysis = {
   confidence: number;
   finalScorecard: FinalScorecard;
 };
+
 
 type ResumeStore = {
   resumeFileName: string | null;
@@ -59,14 +67,23 @@ type ResumeStore = {
     resumeText: string;
     analysis: ResumeAnalysis;
   }) => void;
+  clearResume: () => void;
   clearAll: () => void;
 };
 
-export const useResumeStore = create<ResumeStore>((set) => ({
-  resumeFileName: null,
-  resumeText: "",
-  analysis: null,
-  setResume: ({ resumeFileName, resumeText, analysis }) =>
-    set({ resumeFileName, resumeText, analysis }),
-  clearAll: () => set({ resumeFileName: null, resumeText: "", analysis: null }),
-}));
+export const useResumeStore = create<ResumeStore>()(
+  persist(
+    (set) => ({
+      resumeFileName: null,
+      resumeText: "",
+      analysis: null,
+      setResume: ({ resumeFileName, resumeText, analysis }) =>
+        set({ resumeFileName, resumeText, analysis }),
+      clearResume: () =>
+        set({ resumeFileName: null, resumeText: "", analysis: null }),
+      clearAll: () =>
+        set({ resumeFileName: null, resumeText: "", analysis: null }),
+    }),
+    { name: "career-compass-resume" }
+  )
+);

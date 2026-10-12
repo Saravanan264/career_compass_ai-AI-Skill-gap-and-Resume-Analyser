@@ -1,32 +1,598 @@
 {
   "skills": [
-    { "name": "Python", "keywords": ["pandas", "numpy", "python3"] },
-    { "name": "SQL", "keywords": ["postgres", "mysql", "sqlite", "queries"] },
-    { "name": "Data Analysis", "keywords": ["eda", "data cleaning", "analytics"] },
-    { "name": "Machine Learning", "keywords": ["scikit-learn", "model", "regression", "classification"] },
-    { "name": "Deep Learning", "keywords": ["tensorflow", "pytorch", "neural network"] },
-    { "name": "Statistics", "keywords": ["hypothesis", "p-value", "distribution", "bayesian"] },
-    { "name": "Data Visualization", "keywords": ["matplotlib", "seaborn", "tableau", "power bi"] },
-    { "name": "NLP", "keywords": ["natural language", "tokenization", "bert", "spacy"] },
-    { "name": "Computer Vision", "keywords": ["opencv", "cnn", "image classification"] },
-
-    { "name": "JavaScript", "keywords": ["js", "typescript", "es6"] },
-    { "name": "React", "keywords": ["reactjs", "hooks", "jsx"] },
-    { "name": "Node.js", "keywords": ["node", "express", "api"] },
-    { "name": "HTML", "keywords": ["html5", "semantic html"] },
-    { "name": "CSS", "keywords": ["css3", "tailwind", "sass"] },
-
-    { "name": "Git", "keywords": ["github", "gitlab", "version control"] },
-    { "name": "Docker", "keywords": ["containers", "dockerfile"] },
-    { "name": "CI/CD", "keywords": ["github actions", "pipeline", "deployment"] },
-
-    { "name": "Cloud", "keywords": ["aws", "gcp", "azure", "cloud"] },
-    { "name": "APIs", "keywords": ["rest", "graphql", "swagger"] },
-    { "name": "System Design", "keywords": ["scalability", "microservices", "architecture"] },
-    { "name": "Testing", "keywords": ["jest", "pytest", "unit testing"] },
-
-    { "name": "Communication", "keywords": ["stakeholder", "presentation", "collaboration"] },
-    { "name": "Leadership", "keywords": ["mentoring", "lead", "ownership"] },
-    { "name": "Problem Solving", "keywords": ["debugging", "root cause", "optimization"] }
+    {
+      "name": "Python",
+      "category": "Programming Languages",
+      "aliases": ["Python", "Python 3", "Python3", "Py"],
+      "keywords": ["python", "python3", "py", "pandas", "numpy", "flask", "django", "fastapi"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "High-level, interpreted programming language widely used in web development, data science, and AI."
+    },
+    {
+      "name": "Java",
+      "category": "Programming Languages",
+      "aliases": ["Java", "JDK", "JVM", "Java 8", "Java 11", "Java 17"],
+      "keywords": ["java", "jdk", "jvm", "java8", "java11", "java17", "openjdk"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Object-oriented, class-based programming language for enterprise and Android applications."
+    },
+    {
+      "name": "JavaScript",
+      "category": "Programming Languages",
+      "aliases": ["JavaScript", "JS", "ECMAScript", "ES6"],
+      "keywords": ["javascript", "js", "es6", "es2015", "ecmascript", "vanilla js"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Dynamic scripting language for web client and server development."
+    },
+    {
+      "name": "TypeScript",
+      "category": "Programming Languages",
+      "aliases": ["TypeScript", "TS"],
+      "keywords": ["typescript", "ts", "tsx", "typed javascript"],
+      "parent_skill": "JavaScript",
+      "skill_type": "technical",
+      "description": "Strongly typed programming language that builds on JavaScript."
+    },
+    {
+      "name": "C++",
+      "category": "Programming Languages",
+      "aliases": ["C++", "CPP", "C plus plus"],
+      "keywords": ["c++", "cpp", "c plus plus", "stl"],
+      "parent_skill": "C",
+      "skill_type": "technical",
+      "description": "Cross-platform programming language with low-level memory manipulation features."
+    },
+    {
+      "name": "C",
+      "category": "Programming Languages",
+      "aliases": ["C", "C Lang", "ANSI C"],
+      "keywords": ["c", "c programming", "c language"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "General-purpose procedural programming language."
+    },
+    {
+      "name": "C#",
+      "category": "Programming Languages",
+      "aliases": ["C#", "CSharp", "C Sharp", ".NET C#"],
+      "keywords": ["c#", "csharp", "c sharp", "dotnet c#"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Modern object-oriented language developed by Microsoft."
+    },
+    {
+      "name": "Go",
+      "category": "Programming Languages",
+      "aliases": ["Go", "Golang"],
+      "keywords": ["go", "golang"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Statically typed, compiled programming language designed at Google for concurrent systems."
+    },
+    {
+      "name": "Rust",
+      "category": "Programming Languages",
+      "aliases": ["Rust", "Rustlang"],
+      "keywords": ["rust", "rust lang", "cargo"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Systems programming language focusing on safety, speed, and memory concurrency."
+    },
+    {
+      "name": "R",
+      "category": "Programming Languages",
+      "aliases": ["R", "R Lang", "R-Project"],
+      "keywords": ["r", "r lang", "r programming", "r-project"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Programming language for statistical computing and graphics."
+    },
+    {
+      "name": "HTML",
+      "category": "Web Technologies",
+      "aliases": ["HTML", "HTML5"],
+      "keywords": ["html", "html5", "semantic html"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Standard markup language for document structure on the web."
+    },
+    {
+      "name": "CSS",
+      "category": "Web Technologies",
+      "aliases": ["CSS", "CSS3", "SASS", "SCSS"],
+      "keywords": ["css", "css3", "sass", "scss", "styled-components"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Style sheet language used for describing presentation of HTML documents."
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "Web Technologies",
+      "aliases": ["Tailwind", "Tailwind CSS", "TailwindCSS"],
+      "keywords": ["tailwind", "tailwindcss", "tailwind css"],
+      "parent_skill": "CSS",
+      "skill_type": "technical",
+      "description": "Utility-first CSS framework for rapid user interface styling."
+    },
+    {
+      "name": "Bootstrap",
+      "category": "Web Technologies",
+      "aliases": ["Bootstrap", "Bootstrap 5"],
+      "keywords": ["bootstrap", "bootstrap5", "bootstrap 5"],
+      "parent_skill": "CSS",
+      "skill_type": "technical",
+      "description": "Popular front-end toolkit for building responsive web applications."
+    },
+    {
+      "name": "React",
+      "category": "Frontend Frameworks",
+      "aliases": ["React", "React.js", "ReactJS", "React JS"],
+      "keywords": ["react", "reactjs", "react.js", "react js", "hooks", "jsx"],
+      "parent_skill": "JavaScript",
+      "skill_type": "technical",
+      "description": "JavaScript library for building dynamic component-based user interfaces."
+    },
+    {
+      "name": "Redux",
+      "category": "Frontend Frameworks",
+      "aliases": ["Redux", "Redux Toolkit", "RTK"],
+      "keywords": ["redux", "redux toolkit", "rtk"],
+      "parent_skill": "React",
+      "skill_type": "technical",
+      "description": "Predictable state container for JavaScript apps."
+    },
+    {
+      "name": "Angular",
+      "category": "Frontend Frameworks",
+      "aliases": ["Angular", "Angular.js", "AngularJS"],
+      "keywords": ["angular", "angularjs", "angular.js", "ng"],
+      "parent_skill": "TypeScript",
+      "skill_type": "technical",
+      "description": "Application design framework and development platform for single-page web applications."
+    },
+    {
+      "name": "Vue.js",
+      "category": "Frontend Frameworks",
+      "aliases": ["Vue", "Vue.js", "VueJS"],
+      "keywords": ["vue", "vuejs", "vue.js", "nuxt"],
+      "parent_skill": "JavaScript",
+      "skill_type": "technical",
+      "description": "Progressive JavaScript framework for building user interfaces."
+    },
+    {
+      "name": "Next.js",
+      "category": "Frontend Frameworks",
+      "aliases": ["Next.js", "NextJS", "Next"],
+      "keywords": ["next.js", "nextjs", "next", "server components"],
+      "parent_skill": "React",
+      "skill_type": "technical",
+      "description": "React framework for server-side rendering and static site generation."
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend Frameworks",
+      "aliases": ["Node", "Node.js", "NodeJS"],
+      "keywords": ["node", "node.js", "nodejs"],
+      "parent_skill": "JavaScript",
+      "skill_type": "technical",
+      "description": "Asynchronous event-driven JavaScript runtime environment."
+    },
+    {
+      "name": "Express.js",
+      "category": "Backend Frameworks",
+      "aliases": ["Express", "Express.js", "ExpressJS"],
+      "keywords": ["express", "express.js", "expressjs"],
+      "parent_skill": "Node.js",
+      "skill_type": "technical",
+      "description": "Minimal and flexible Node.js web application framework."
+    },
+    {
+      "name": "Spring Boot",
+      "category": "Backend Frameworks",
+      "aliases": ["Spring Boot", "Spring", "Spring Framework"],
+      "keywords": ["spring boot", "spring", "spring framework", "spring mvc", "spring security"],
+      "parent_skill": "Java",
+      "skill_type": "technical",
+      "description": "Java-based framework for creating stand-alone, production-grade Spring applications."
+    },
+    {
+      "name": "FastAPI",
+      "category": "Backend Frameworks",
+      "aliases": ["FastAPI", "Fast API"],
+      "keywords": ["fastapi", "fast api", "starlette", "uvicorn"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "Modern, high-performance web framework for building APIs with Python."
+    },
+    {
+      "name": "Django",
+      "category": "Backend Frameworks",
+      "aliases": ["Django", "Django REST Framework", "DRF"],
+      "keywords": ["django", "django rest", "drf", "django rest framework"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "High-level Python web framework encouraging rapid development."
+    },
+    {
+      "name": "Flask",
+      "category": "Backend Frameworks",
+      "aliases": ["Flask", "Flask API"],
+      "keywords": ["flask", "flask api"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "Lightweight WSGI web application framework in Python."
+    },
+    {
+      "name": "SQL",
+      "category": "Databases",
+      "aliases": ["SQL", "SQL Database", "Relational Database", "PL/SQL", "T-SQL"],
+      "keywords": ["sql", "sql database", "queries", "plsql", "t-sql", "relational database"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Domain-specific language used in programming for managing relational database management systems."
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Databases",
+      "aliases": ["PostgreSQL", "Postgres", "PSQL"],
+      "keywords": ["postgresql", "postgres", "psql"],
+      "parent_skill": "SQL",
+      "skill_type": "technical",
+      "description": "Powerful open-source object-relational database system."
+    },
+    {
+      "name": "MySQL",
+      "category": "Databases",
+      "aliases": ["MySQL"],
+      "keywords": ["mysql"],
+      "parent_skill": "SQL",
+      "skill_type": "technical",
+      "description": "Widely used open-source relational database management system."
+    },
+    {
+      "name": "MongoDB",
+      "category": "Databases",
+      "aliases": ["MongoDB", "Mongo", "NoSQL"],
+      "keywords": ["mongodb", "mongo", "nosql", "mongoose"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Document-based distributed NoSQL database."
+    },
+    {
+      "name": "SQLite",
+      "category": "Databases",
+      "aliases": ["SQLite", "SQLite3"],
+      "keywords": ["sqlite", "sqlite3"],
+      "parent_skill": "SQL",
+      "skill_type": "technical",
+      "description": "C-language library implementing a small, fast, self-contained SQL database engine."
+    },
+    {
+      "name": "Redis",
+      "category": "Databases",
+      "aliases": ["Redis", "Redis Cache"],
+      "keywords": ["redis", "caching", "redis cache"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "In-memory data structure store used as a database, cache, and message broker."
+    },
+    {
+      "name": "REST API",
+      "category": "Backend Frameworks",
+      "aliases": ["REST API", "RESTful API", "REST"],
+      "keywords": ["rest api", "rest", "restful", "api design", "api development", "swagger", "openapi"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Architectural style for designing networked applications and web APIs."
+    },
+    {
+      "name": "GraphQL",
+      "category": "Backend Frameworks",
+      "aliases": ["GraphQL", "Apollo GraphQL"],
+      "keywords": ["graphql", "apollo", "query language"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Query language for APIs and runtime for fulfilling queries with existing data."
+    },
+    {
+      "name": "WebSockets",
+      "category": "Backend Frameworks",
+      "aliases": ["WebSockets", "WebSocket", "Socket.io"],
+      "keywords": ["websockets", "websocket", "socket.io"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Computer communications protocol providing full-duplex communication channels over TCP."
+    },
+    {
+      "name": "Microservices",
+      "category": "Software Architecture",
+      "aliases": ["Microservices", "Microservice Architecture", "SOA"],
+      "keywords": ["microservices", "microservice", "service oriented", "soa"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Architectural approach to developing applications as a collection of small autonomous services."
+    },
+    {
+      "name": "System Design",
+      "category": "Software Architecture",
+      "aliases": ["System Design", "Distributed Systems", "Software Architecture"],
+      "keywords": ["system design", "scalability", "architecture", "distributed systems", "high availability"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Process of defining architecture, interfaces, and data for a system to satisfy requirements."
+    },
+    {
+      "name": "Git",
+      "category": "Version Control",
+      "aliases": ["Git", "GitHub", "GitLab", "Bitbucket"],
+      "keywords": ["git", "github", "gitlab", "version control", "bitbucket"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Distributed version control system for tracking changes in source code."
+    },
+    {
+      "name": "Docker",
+      "category": "DevOps",
+      "aliases": ["Docker", "Containers", "Docker Compose"],
+      "keywords": ["docker", "containers", "dockerfile", "containerization", "docker compose"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Platform for developing, shipping, and running applications in lightweight containers."
+    },
+    {
+      "name": "Kubernetes",
+      "category": "DevOps",
+      "aliases": ["Kubernetes", "K8s", "Kubectl"],
+      "keywords": ["kubernetes", "k8s", "kubectl", "container orchestration", "helm"],
+      "parent_skill": "Docker",
+      "skill_type": "technical",
+      "description": "Open-source system for automating deployment, scaling, and management of containerized applications."
+    },
+    {
+      "name": "CI/CD",
+      "category": "DevOps",
+      "aliases": ["CI/CD", "Continuous Integration", "Continuous Deployment", "Jenkins", "GitHub Actions"],
+      "keywords": ["ci/cd", "continuous integration", "github actions", "jenkins", "pipeline", "deployment", "gitlab ci", "circleci"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Method to frequently deliver apps to customers by introducing automation into development stages."
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud Technologies",
+      "aliases": ["AWS", "Amazon Web Services", "EC2", "S3"],
+      "keywords": ["aws", "amazon web services", "ec2", "s3", "lambda", "rds", "cloudformation"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Comprehensive cloud computing platform provided by Amazon."
+    },
+    {
+      "name": "Azure",
+      "category": "Cloud Technologies",
+      "aliases": ["Azure", "Microsoft Azure"],
+      "keywords": ["azure", "microsoft azure", "azure devops", "azure functions"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Cloud computing service created by Microsoft for building and managing applications."
+    },
+    {
+      "name": "GCP",
+      "category": "Cloud Technologies",
+      "aliases": ["GCP", "Google Cloud", "Google Cloud Platform"],
+      "keywords": ["gcp", "google cloud", "google cloud platform", "bigquery", "cloud run"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Suite of cloud computing services offered by Google."
+    },
+    {
+      "name": "Linux",
+      "category": "Systems & Infrastructure",
+      "aliases": ["Linux", "Ubuntu", "Bash", "Shell Scripting", "Unix"],
+      "keywords": ["linux", "ubuntu", "centos", "bash", "shell scripting", "unix"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Open-source Unix-like operating system kernel and environment."
+    },
+    {
+      "name": "Data Analysis",
+      "category": "Data Science",
+      "aliases": ["Data Analysis", "EDA", "Data Cleaning", "Analytics"],
+      "keywords": ["data analysis", "eda", "data cleaning", "analytics", "data wrangling"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Process of inspecting, cleansing, transforming, and modeling data to discover useful information."
+    },
+    {
+      "name": "Pandas",
+      "category": "Data Science",
+      "aliases": ["Pandas"],
+      "keywords": ["pandas", "dataframe"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "Fast, powerful, and flexible open-source data analysis and manipulation tool in Python."
+    },
+    {
+      "name": "NumPy",
+      "category": "Data Science",
+      "aliases": ["NumPy"],
+      "keywords": ["numpy", "ndarray"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "Fundamental package for scientific computing with Python."
+    },
+    {
+      "name": "Scikit-learn",
+      "category": "Machine Learning",
+      "aliases": ["Scikit-learn", "sklearn", "SKLearn"],
+      "keywords": ["scikit-learn", "sklearn"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "Simple and efficient tools for predictive data analysis and machine learning in Python."
+    },
+    {
+      "name": "Machine Learning",
+      "category": "Machine Learning",
+      "aliases": ["Machine Learning", "ML"],
+      "keywords": ["machine learning", "ml", "scikit-learn", "sklearn", "regression", "classification"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Branch of AI focusing on data and algorithms to imitate human learning and improve accuracy."
+    },
+    {
+      "name": "Deep Learning",
+      "category": "Deep Learning",
+      "aliases": ["Deep Learning", "DL", "Neural Networks"],
+      "keywords": ["deep learning", "dl", "neural network", "keras", "cnn", "rnn"],
+      "parent_skill": "Machine Learning",
+      "skill_type": "technical",
+      "description": "Subset of machine learning based on artificial neural networks with representation learning."
+    },
+    {
+      "name": "PyTorch",
+      "category": "Deep Learning",
+      "aliases": ["PyTorch", "Torch"],
+      "keywords": ["pytorch", "torch"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "Open-source machine learning framework based on the Torch library."
+    },
+    {
+      "name": "TensorFlow",
+      "category": "Deep Learning",
+      "aliases": ["TensorFlow", "TF", "Keras"],
+      "keywords": ["tensorflow", "tf", "keras"],
+      "parent_skill": "Python",
+      "skill_type": "technical",
+      "description": "End-to-end open-source platform for machine learning and deep neural networks."
+    },
+    {
+      "name": "Statistics",
+      "category": "Data Science",
+      "aliases": ["Statistics", "Statistical Analysis"],
+      "keywords": ["statistics", "hypothesis", "p-value", "distribution", "bayesian", "statistical"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Discipline concerned with collection, organization, analysis, and interpretation of data."
+    },
+    {
+      "name": "Data Visualization",
+      "category": "Data Science",
+      "aliases": ["Data Visualization", "Matplotlib", "Seaborn", "Tableau", "Power BI"],
+      "keywords": ["data visualization", "matplotlib", "seaborn", "tableau", "power bi", "plotly"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Graphical representation of information and data using visual elements."
+    },
+    {
+      "name": "NLP",
+      "category": "NLP",
+      "aliases": ["NLP", "Natural Language Processing"],
+      "keywords": ["nlp", "natural language processing", "natural language", "tokenization", "spacy", "text processing"],
+      "parent_skill": "Machine Learning",
+      "skill_type": "technical",
+      "description": "Subfield of computer science and AI concerned with giving computers the ability to understand text and spoken words."
+    },
+    {
+      "name": "Computer Vision",
+      "category": "Deep Learning",
+      "aliases": ["Computer Vision", "CV", "OpenCV"],
+      "keywords": ["computer vision", "opencv", "cnn", "image classification", "yolo", "object detection"],
+      "parent_skill": "Machine Learning",
+      "skill_type": "technical",
+      "description": "Field of AI enabling computers to derive meaningful information from digital images and videos."
+    },
+    {
+      "name": "Generative AI",
+      "category": "Generative AI",
+      "aliases": ["Generative AI", "GenAI"],
+      "keywords": ["generative ai", "genai", "generative model"],
+      "parent_skill": "Deep Learning",
+      "skill_type": "technical",
+      "description": "Artificial intelligence capable of generating text, images, or other media using generative models."
+    },
+    {
+      "name": "LLM",
+      "category": "Generative AI",
+      "aliases": ["LLM", "Large Language Models", "GPT"],
+      "keywords": ["llm", "large language model", "large language models", "gpt"],
+      "parent_skill": "Generative AI",
+      "skill_type": "technical",
+      "description": "Language model consisting of a neural network with many parameters trained on vast quantities of unannotated text."
+    },
+    {
+      "name": "RAG",
+      "category": "Generative AI",
+      "aliases": ["RAG", "Retrieval-Augmented Generation"],
+      "keywords": ["rag", "retrieval augmented generation", "retrieval-augmented generation"],
+      "parent_skill": "LLM",
+      "skill_type": "technical",
+      "description": "Technique for enhancing LLM responses with information retrieved from authoritative knowledge bases."
+    },
+    {
+      "name": "Transformers",
+      "category": "Generative AI",
+      "aliases": ["Transformers", "Hugging Face", "BERT"],
+      "keywords": ["transformers", "transformer", "hugging face", "bert"],
+      "parent_skill": "Deep Learning",
+      "skill_type": "technical",
+      "description": "Deep learning architecture introduced in 2017 adopting the mechanism of self-attention."
+    },
+    {
+      "name": "Testing",
+      "category": "Testing & Quality",
+      "aliases": ["Testing", "Unit Testing", "Jest", "PyTest", "JUnit", "Cypress", "Selenium"],
+      "keywords": ["testing", "jest", "pytest", "junit", "unit testing", "integration testing", "selenium", "cypress"],
+      "parent_skill": null,
+      "skill_type": "technical",
+      "description": "Process of evaluating and verifying that a software application or system works as expected."
+    },
+    {
+      "name": "Agile",
+      "category": "Methodology",
+      "aliases": ["Agile", "Scrum", "Kanban", "Sprint"],
+      "keywords": ["agile", "scrum", "kanban", "sprint", "jira", "agile methodology"],
+      "parent_skill": null,
+      "skill_type": "process",
+      "description": "Iterative approach to project management and software development."
+    },
+    {
+      "name": "Postman",
+      "category": "Tools",
+      "aliases": ["Postman", "API Testing"],
+      "keywords": ["postman", "api testing"],
+      "parent_skill": "REST API",
+      "skill_type": "technical",
+      "description": "API platform for building and using APIs."
+    },
+    {
+      "name": "Communication",
+      "category": "Soft Skills",
+      "aliases": ["Communication", "Verbal Communication", "Presentation"],
+      "keywords": ["communication", "stakeholder", "presentation", "collaboration", "teamwork"],
+      "parent_skill": null,
+      "skill_type": "soft",
+      "description": "Ability to convey information effectively and efficiently."
+    },
+    {
+      "name": "Leadership",
+      "category": "Soft Skills",
+      "aliases": ["Leadership", "Team Lead", "Mentoring"],
+      "keywords": ["leadership", "mentoring", "lead", "ownership", "team lead", "management"],
+      "parent_skill": null,
+      "skill_type": "soft",
+      "description": "Ability to guide, direct, or influence team members and outcomes."
+    },
+    {
+      "name": "Problem Solving",
+      "category": "Soft Skills",
+      "aliases": ["Problem Solving", "Analytical Thinking", "Debugging", "Data Structures"],
+      "keywords": ["problem solving", "debugging", "root cause", "optimization", "analytical thinking", "dsa", "data structures", "algorithms"],
+      "parent_skill": null,
+      "skill_type": "soft",
+      "description": "Act of defining a problem, determining its cause, identifying and prioritizing solutions."
+    }
   ]
 }

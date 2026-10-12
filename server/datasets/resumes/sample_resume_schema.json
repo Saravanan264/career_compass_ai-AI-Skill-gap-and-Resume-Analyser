@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ResumeDatasetEntry",
+  "description": "Standard schema for anonymized resume documents in dataset corpus",
+  "type": "object",
+  "properties": {
+    "resume_id": { "type": "string", "example": "res_sample_001" },
+    "raw_text": { "type": "string", "example": "Experienced Software Engineer with 4 years in Python, FastAPI, and PostgreSQL..." },
+    "sections": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "experience": { "type": "string" },
+        "education": { "type": "string" },
+        "skills": { "type": "string" },
+        "projects": { "type": "string" }
+      }
+    },
+    "extracted_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Python", "FastAPI", "PostgreSQL", "Docker", "Git"]
+    },
+    "years_experience": { "type": "number", "example": 4.0 },
+    "degrees": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Bachelor of Science in Computer Science"]
+    },
+    "ats_score": { "type": "number", "example": 82.5 }
+  },
+  "required": ["resume_id", "raw_text", "extracted_skills"]
+}

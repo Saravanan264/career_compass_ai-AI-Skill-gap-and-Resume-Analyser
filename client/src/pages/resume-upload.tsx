@@ -12,6 +12,7 @@ import { AppShell } from "@/components/app-shell";
 import { useResumeStore } from "@/state/resume-store";
 import { extractTextFromPdf } from "@/lib/pdf";
 import { analyzeResumeText } from "@/lib/analyzer";
+import { uploadResumeApi } from "@/lib/api";
 
 export default function ResumeUpload() {
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -33,7 +34,7 @@ export default function ResumeUpload() {
   async function handleFile(file: File) {
     if (!file) return;
 
-    if (file.type !== "application/pdf") {
+    if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith(".pdf")) {
       toast({
         title: "Please upload a PDF",
         description: "This prototype supports PDF resumes for the demo.",
@@ -43,11 +44,60 @@ export default function ResumeUpload() {
     }
 
     setBusy(true);
-    setProgress(8);
+    setProgress(15);
+    clearAll(); // Clear previous store state for fresh upload
 
     try {
-      setProgress(18);
-      const text = await extractTextFromPdf(file, (p) => setProgress(p));
+      // Try backend upload first
+      try {
+        setProgress(40);
+        const backendRes = await uploadResumeApi(file);
+        if (backendRes && backendRes.analysis) {
+          if (backendRes.analysis.isValidResume === false) {
+            clearAll();
+            toast({
+              title: "Invalid Resume Document",
+              description: backendRes.analysis.validationReason || "This document does not appear to be a valid resume. Please upload a resume containing candidate details, skills, education, experience, projects, or other resume sections.",
+              variant: "destructive",
+            });
+            setBusy(false);
+            setProgress(0);
+            return;
+          }
+          setProgress(100);
+          setResume({
+            resumeFileName: file.name,
+            resumeText: backendRes.analysis.parsed_text || "",
+            analysis: backendRes.analysis,
+          });
+          toast({
+            title: "Resume uploaded & analyzed",
+            description: "Your ATS dashboard is ready with backend persistence.",
+          });
+          setTimeout(() => {
+            setLocation("/ats");
+          }, 250);
+          return;
+        }
+      } catch (backendError: any) {
+        console.warn("Backend upload failed or returned error:", backendError);
+        const errMsg = backendError?.message || String(backendError);
+        if (errMsg.includes("does not appear to be a valid resume") || errMsg.includes("400")) {
+          clearAll();
+          toast({
+            title: "Invalid Resume Document",
+            description: "This document does not appear to be a valid resume. Please upload a resume containing candidate details, skills, education, experience, projects, or other resume sections.",
+            variant: "destructive",
+          });
+          setBusy(false);
+          setProgress(0);
+          return;
+        }
+      }
+
+      // Local fallback
+      setProgress(50);
+      const text = await extractTextFromPdf(file, (p) => setProgress(50 + Math.round(p * 0.4)));
 
       if (!text.trim()) {
         toast({
@@ -61,8 +111,20 @@ export default function ResumeUpload() {
         return;
       }
 
-      setProgress(86);
+      setProgress(90);
       const analyzed = await analyzeResumeText(text);
+
+      if (analyzed.isValidResume === false) {
+        clearAll();
+        toast({
+          title: "Invalid Resume Document",
+          description: analyzed.validationReason || "This document does not appear to be a valid resume. Please upload a resume containing candidate details, skills, education, experience, projects, or other resume sections.",
+          variant: "destructive",
+        });
+        setBusy(false);
+        setProgress(0);
+        return;
+      }
 
       setResume({
         resumeFileName: file.name,
@@ -91,6 +153,8 @@ export default function ResumeUpload() {
     }
   }
 
+
+
   async function onPick() {
     inputRef.current?.click();
   }
@@ -111,11 +175,11 @@ export default function ResumeUpload() {
           </div>
 
           <h1 className="ai-title text-3xl md:text-4xl font-semibold">
-            AI Resume Analyzer & Career Roadmap System
+            Career Compass AI
           </h1>
           <p className="text-muted-foreground max-w-2xl">
-            Upload your resume PDF to generate an ATS-style score, detect skills, identify
-            gaps, and get a vertical learning roadmap plus domain-fit insights.
+            Upload your resume to begin your career assessment. We analyse your skills,
+            compare against job requirements, and guide you with a personalized roadmap.
           </p>
         </div>
 

@@ -1,9 +1,8 @@
-import * as pdfjsLib from "pdfjs-dist";
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
 
-// Use the worker from a CDN to avoid bundler worker config.
-// This is a demo-friendly approach for the prototype.
+// ✅ Worker MUST match version
 (pdfjsLib as any).GlobalWorkerOptions.workerSrc =
-  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
 function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
@@ -11,26 +10,35 @@ function clamp(n: number, min: number, max: number) {
 
 export async function extractTextFromPdf(
   file: File,
-  onProgress?: (p: number) => void,
+  onProgress?: (p: number) => void
 ): Promise<string> {
-  const buf = await file.arrayBuffer();
-  onProgress?.(22);
+  const buffer = await file.arrayBuffer();
+  onProgress?.(20);
 
-  const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
-  const total = pdf.numPages || 1;
+  const loadingTask = pdfjsLib.getDocument({ data: buffer });
+  const pdf = await loadingTask.promise;
 
-  let full = "";
-  for (let i = 1; i <= total; i++) {
-    const page = await pdf.getPage(i);
+  const totalPages = pdf.numPages || 1;
+  let fullText = "";
+
+  for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+    const page = await pdf.getPage(pageNum);
     const content = await page.getTextContent();
-    const text = (content.items as any[])
-      .map((it) => ("str" in it ? it.str : ""))
+
+    const pageText = (content.items as any[])
+      .map((item) => ("str" in item ? item.str : ""))
       .join(" ");
 
-    full += text + "\n";
-    const p = clamp(22 + Math.round((i / total) * 58), 22, 82);
-    onProgress?.(p);
+    fullText += pageText + "\n";
+
+    const progress = clamp(
+      20 + Math.round((pageNum / totalPages) * 70),
+      20,
+      90
+    );
+    onProgress?.(progress);
   }
 
-  return full;
+  onProgress?.(100);
+  return fullText.trim();
 }

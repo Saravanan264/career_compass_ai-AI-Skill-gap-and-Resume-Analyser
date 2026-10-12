@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JobDescriptionDatasetEntry",
+  "description": "Standard schema for analyzed job description documents in dataset corpus",
+  "type": "object",
+  "properties": {
+    "jd_id": { "type": "string", "example": "jd_sample_001" },
+    "title": { "type": "string", "example": "Backend Software Engineer" },
+    "raw_text": { "type": "string", "example": "We are looking for a Senior Backend Developer with 3+ years of Python, FastAPI, and Docker experience..." },
+    "required_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Python", "FastAPI", "PostgreSQL"]
+    },
+    "preferred_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Docker", "Kubernetes", "Redis"]
+    },
+    "min_experience_years": { "type": "number", "example": 3.0 },
+    "required_education": { "type": "string", "example": "Bachelor's Degree in CS or related field" }
+  },
+  "required": ["jd_id", "title", "raw_text", "required_skills"]
+}

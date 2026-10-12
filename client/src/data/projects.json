@@ -1,0 +1,112 @@
+{
+  "projects": [
+    {
+      "id": "employee-mgmt-system",
+      "title": "Cloud-Based Employee Management System",
+      "description": "A full-stack CRUD application with authentication, role-based access, and cloud deployment. Build REST APIs, containerize with Docker, and deploy on AWS.",
+      "difficulty": "Intermediate",
+      "estimatedHours": 40,
+      "skillsCovered": ["Java", "Spring Boot", "REST API", "SQL", "Docker", "AWS", "Git"],
+      "tags": ["backend", "cloud", "devops"]
+    },
+    {
+      "id": "ecommerce-backend",
+      "title": "E-Commerce Backend API",
+      "description": "Build a backend for an e-commerce platform with product catalog, cart, orders, and payment integration. Includes database design and API documentation.",
+      "difficulty": "Intermediate",
+      "estimatedHours": 50,
+      "skillsCovered": ["Java", "Spring Boot", "REST API", "SQL", "Microservices", "Testing", "Git"],
+      "tags": ["backend", "architecture"]
+    },
+    {
+      "id": "task-tracker-fullstack",
+      "title": "Full-Stack Task Tracker Application",
+      "description": "A complete task management app with React frontend, Node.js backend, user authentication, and real-time updates.",
+      "difficulty": "Intermediate",
+      "estimatedHours": 35,
+      "skillsCovered": ["JavaScript", "React", "Node.js", "SQL", "REST API", "HTML", "CSS", "Git"],
+      "tags": ["fullstack", "frontend"]
+    },
+    {
+      "id": "data-pipeline",
+      "title": "Automated Data Pipeline & Dashboard",
+      "description": "Build an ETL pipeline that ingests, cleans, and transforms data. Create interactive visualisations and automated reports.",
+      "difficulty": "Intermediate",
+      "estimatedHours": 30,
+      "skillsCovered": ["Python", "SQL", "Data Analysis", "Data Visualization", "Statistics", "Git"],
+      "tags": ["data", "analytics"]
+    },
+    {
+      "id": "ml-prediction-api",
+      "title": "ML Prediction Service with API",
+      "description": "Train a machine learning model, wrap it in a FastAPI service, containerize it, and deploy. Includes model evaluation and monitoring.",
+      "difficulty": "Advanced",
+      "estimatedHours": 45,
+      "skillsCovered": ["Python", "Machine Learning", "FastAPI", "REST API", "Docker", "AWS", "Git"],
+      "tags": ["ml", "backend", "cloud"]
+    },
+    {
+      "id": "sentiment-analysis",
+      "title": "NLP Sentiment Analysis System",
+      "description": "Build a text classification system using NLP techniques. Process and analyse text data, train models, and deploy an inference API.",
+      "difficulty": "Advanced",
+      "estimatedHours": 40,
+      "skillsCovered": ["Python", "NLP", "Machine Learning", "Deep Learning", "REST API", "Git"],
+      "tags": ["ai", "nlp"]
+    },
+    {
+      "id": "portfolio-website",
+      "title": "Responsive Portfolio Website",
+      "description": "A modern, responsive portfolio with animations, contact form, and project showcase. Practice semantic HTML, CSS layouts, and React components.",
+      "difficulty": "Beginner",
+      "estimatedHours": 20,
+      "skillsCovered": ["HTML", "CSS", "JavaScript", "React", "Git"],
+      "tags": ["frontend"]
+    },
+    {
+      "id": "ci-cd-pipeline",
+      "title": "CI/CD Pipeline with Docker & Kubernetes",
+      "description": "Set up a complete CI/CD pipeline with automated testing, Docker containerization, and Kubernetes deployment configuration.",
+      "difficulty": "Advanced",
+      "estimatedHours": 30,
+      "skillsCovered": ["Docker", "Kubernetes", "CI/CD", "Linux", "Git", "AWS"],
+      "tags": ["devops", "cloud"]
+    },
+    {
+      "id": "chat-app-realtime",
+      "title": "Real-Time Chat Application",
+      "description": "Build a real-time messaging app with WebSockets, user authentication, and message persistence. Practice frontend-backend integration.",
+      "difficulty": "Intermediate",
+      "estimatedHours": 30,
+      "skillsCovered": ["JavaScript", "React", "Node.js", "MongoDB", "REST API", "HTML", "CSS", "Git"],
+      "tags": ["fullstack"]
+    },
+    {
+      "id": "image-classifier",
+      "title": "Image Classification with Deep Learning",
+      "description": "Train a CNN-based image classifier using PyTorch/TensorFlow. Include data augmentation, transfer learning, and model evaluation.",
+      "difficulty": "Advanced",
+      "estimatedHours": 35,
+      "skillsCovered": ["Python", "Deep Learning", "Computer Vision", "Machine Learning", "Git"],
+      "tags": ["ai", "computer-vision"]
+    },
+    {
+      "id": "microservice-arch",
+      "title": "Microservice Architecture Demo",
+      "description": "Design and implement a microservice-based system with service discovery, API gateway, and inter-service communication.",
+      "difficulty": "Advanced",
+      "estimatedHours": 50,
+      "skillsCovered": ["Java", "Spring Boot", "Microservices", "Docker", "REST API", "SQL", "System Design", "Git"],
+      "tags": ["backend", "architecture"]
+    },
+    {
+      "id": "student-analytics-dashboard",
+      "title": "Student Performance Analytics Dashboard",
+      "description": "Build a data-driven dashboard that analyses student performance data, generates insights, and creates visualisation reports.",
+      "difficulty": "Intermediate",
+      "estimatedHours": 30,
+      "skillsCovered": ["Python", "SQL", "Data Analysis", "Data Visualization", "Statistics", "Communication"],
+      "tags": ["data", "analytics"]
+    }
+  ]
+}

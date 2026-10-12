@@ -1,0 +1,92 @@
+{
+  "roles": [
+    {
+      "id": "backend-developer",
+      "title": "Backend Developer",
+      "description": "Design and build server-side logic, APIs, and database integrations.",
+      "requiredSkills": ["Java", "SQL", "REST API", "Spring Boot", "Git"],
+      "preferredSkills": ["Docker", "AWS", "Microservices", "CI/CD", "System Design", "Testing", "Linux"],
+      "importance": {
+        "Java": 10, "SQL": 9, "REST API": 9, "Spring Boot": 8, "Git": 7,
+        "Docker": 7, "AWS": 6, "Microservices": 5, "CI/CD": 5, "System Design": 5, "Testing": 6, "Linux": 5
+      }
+    },
+    {
+      "id": "java-developer",
+      "title": "Java Developer",
+      "description": "Develop enterprise applications using Java and related frameworks.",
+      "requiredSkills": ["Java", "Spring Boot", "SQL", "REST API", "Git"],
+      "preferredSkills": ["Docker", "Microservices", "AWS", "Testing", "CI/CD", "System Design"],
+      "importance": {
+        "Java": 10, "Spring Boot": 9, "SQL": 8, "REST API": 8, "Git": 7,
+        "Docker": 6, "Microservices": 6, "AWS": 5, "Testing": 6, "CI/CD": 5, "System Design": 5
+      }
+    },
+    {
+      "id": "python-developer",
+      "title": "Python Developer",
+      "description": "Build applications and services using Python ecosystem.",
+      "requiredSkills": ["Python", "SQL", "REST API", "Git"],
+      "preferredSkills": ["FastAPI", "Django", "Docker", "AWS", "Testing", "CI/CD", "Linux"],
+      "importance": {
+        "Python": 10, "SQL": 8, "REST API": 8, "Git": 7,
+        "FastAPI": 7, "Django": 6, "Docker": 6, "AWS": 5, "Testing": 6, "CI/CD": 5, "Linux": 5
+      }
+    },
+    {
+      "id": "frontend-developer",
+      "title": "Frontend Developer",
+      "description": "Build responsive and interactive user interfaces for web applications.",
+      "requiredSkills": ["JavaScript", "React", "HTML", "CSS", "Git"],
+      "preferredSkills": ["TypeScript", "Next.js", "REST API", "Testing", "CI/CD"],
+      "importance": {
+        "JavaScript": 10, "React": 9, "HTML": 8, "CSS": 8, "Git": 7,
+        "TypeScript": 7, "Next.js": 5, "REST API": 6, "Testing": 5, "CI/CD": 4
+      }
+    },
+    {
+      "id": "fullstack-developer",
+      "title": "Full Stack Developer",
+      "description": "Work across frontend and backend to deliver complete web applications.",
+      "requiredSkills": ["JavaScript", "React", "Node.js", "SQL", "REST API", "Git"],
+      "preferredSkills": ["TypeScript", "Docker", "AWS", "MongoDB", "CI/CD", "HTML", "CSS"],
+      "importance": {
+        "JavaScript": 9, "React": 8, "Node.js": 8, "SQL": 8, "REST API": 8, "Git": 7,
+        "TypeScript": 6, "Docker": 5, "AWS": 5, "MongoDB": 5, "CI/CD": 5, "HTML": 7, "CSS": 7
+      }
+    },
+    {
+      "id": "data-analyst",
+      "title": "Data Analyst",
+      "description": "Analyse data to extract insights and support business decisions.",
+      "requiredSkills": ["SQL", "Python", "Data Analysis", "Data Visualization", "Statistics"],
+      "preferredSkills": ["Machine Learning", "Communication", "Git", "Problem Solving"],
+      "importance": {
+        "SQL": 10, "Python": 9, "Data Analysis": 9, "Data Visualization": 8, "Statistics": 8,
+        "Machine Learning": 5, "Communication": 6, "Git": 5, "Problem Solving": 6
+      }
+    },
+    {
+      "id": "data-scientist",
+      "title": "Data Scientist",
+      "description": "Apply statistical methods and machine learning to solve complex problems.",
+      "requiredSkills": ["Python", "Machine Learning", "Statistics", "SQL", "Data Analysis"],
+      "preferredSkills": ["Deep Learning", "NLP", "Data Visualization", "Git", "Docker", "Communication"],
+      "importance": {
+        "Python": 10, "Machine Learning": 10, "Statistics": 9, "SQL": 8, "Data Analysis": 8,
+        "Deep Learning": 6, "NLP": 5, "Data Visualization": 6, "Git": 5, "Docker": 4, "Communication": 5
+      }
+    },
+    {
+      "id": "ml-engineer",
+      "title": "ML Engineer",
+      "description": "Build and deploy machine learning models at scale.",
+      "requiredSkills": ["Python", "Machine Learning", "Deep Learning", "Docker", "REST API"],
+      "preferredSkills": ["AWS", "Kubernetes", "System Design", "CI/CD", "Git", "SQL"],
+      "importance": {
+        "Python": 10, "Machine Learning": 10, "Deep Learning": 8, "Docker": 8, "REST API": 7,
+        "AWS": 6, "Kubernetes": 5, "System Design": 6, "CI/CD": 5, "Git": 6, "SQL": 6
+      }
+    }
+  ]
+}

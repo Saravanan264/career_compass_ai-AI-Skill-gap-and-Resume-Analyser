@@ -1,6 +1,6 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "wouter";
-import { ArrowRight, BarChart3, CheckCircle2, FileText, Info } from "lucide-react";
+import { ArrowRight, BarChart3, CheckCircle2, FileText, Info, Loader2 } from "lucide-react";
 
 import { AppShell } from "@/components/app-shell";
 import { useResumeStore } from "@/state/resume-store";
@@ -8,17 +8,54 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { getUserResumesApi, getResumeAnalysisApi } from "@/lib/api";
 
 import { AtsScoreBreakdownChart } from "@/components/charts/ats-score-breakdown";
 
 export default function AtsDashboard() {
   const [, setLocation] = useLocation();
-  const { resumeFileName, analysis } = useResumeStore();
+  const { resumeFileName, analysis, setResume } = useResumeStore();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!analysis) {
+      setLoading(true);
+      getUserResumesApi()
+        .then(async (resumes) => {
+          if (resumes && resumes.length > 0) {
+            const latest = resumes[0];
+            try {
+              const fullResume = await getResumeAnalysisApi(latest.id);
+              if (fullResume) {
+                setResume({
+                  resumeFileName: latest.file_name,
+                  resumeText: "",
+                  analysis: fullResume,
+                });
+              }
+            } catch (e) {}
+          }
+        })
+        .catch(() => {})
+        .finally(() => setLoading(false));
+    }
+  }, [analysis, setResume]);
 
   const missing = useMemo((): string[] => {
     if (!analysis) return [];
     return analysis.ats.missingTopKeywords.slice(0, 10);
   }, [analysis]);
+
+  if (loading) {
+    return (
+      <AppShell current="ats">
+        <Card className="ai-card p-6 flex items-center justify-center gap-3">
+          <Loader2 className="h-5 w-5 animate-spin text-primary" />
+          <span className="text-sm text-muted-foreground">Loading your resume analysis...</span>
+        </Card>
+      </AppShell>
+    );
+  }
 
   if (!analysis) {
     return (
@@ -48,6 +85,7 @@ export default function AtsDashboard() {
       </AppShell>
     );
   }
+
 
   return (
     <AppShell current="ats">

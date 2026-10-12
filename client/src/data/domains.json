@@ -2,67 +2,23 @@
   "domains": [
     {
       "name": "Data Science",
-      "requiredSkills": [
-        "Python",
-        "SQL",
-        "Data Analysis",
-        "Machine Learning",
-        "Statistics",
-        "Data Visualization",
-        "Git",
-        "Communication"
-      ]
+      "requiredSkills": ["Python", "SQL", "Data Analysis", "Machine Learning", "Statistics", "Data Visualization", "Git", "Communication"]
     },
     {
       "name": "Backend Engineering",
-      "requiredSkills": [
-        "Python",
-        "SQL",
-        "APIs",
-        "System Design",
-        "Testing",
-        "Cloud",
-        "Git",
-        "Problem Solving"
-      ]
+      "requiredSkills": ["Java", "SQL", "REST API", "Spring Boot", "System Design", "Testing", "Docker", "Git", "Problem Solving"]
     },
     {
       "name": "Frontend Engineering",
-      "requiredSkills": [
-        "JavaScript",
-        "React",
-        "HTML",
-        "CSS",
-        "APIs",
-        "Git",
-        "Testing",
-        "Communication"
-      ]
+      "requiredSkills": ["JavaScript", "React", "HTML", "CSS", "TypeScript", "REST API", "Git", "Testing", "Communication"]
     },
     {
       "name": "ML Engineering",
-      "requiredSkills": [
-        "Python",
-        "Machine Learning",
-        "Deep Learning",
-        "Cloud",
-        "Docker",
-        "System Design",
-        "APIs",
-        "Problem Solving"
-      ]
+      "requiredSkills": ["Python", "Machine Learning", "Deep Learning", "Docker", "REST API", "AWS", "System Design", "Git", "Problem Solving"]
     },
     {
-      "name": "Product Analytics",
-      "requiredSkills": [
-        "SQL",
-        "Data Analysis",
-        "Statistics",
-        "Data Visualization",
-        "Communication",
-        "Problem Solving",
-        "Leadership"
-      ]
+      "name": "Full Stack",
+      "requiredSkills": ["JavaScript", "React", "Node.js", "SQL", "REST API", "HTML", "CSS", "Git", "Docker"]
     }
   ]
 }

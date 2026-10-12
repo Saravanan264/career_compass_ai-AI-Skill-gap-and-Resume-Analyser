@@ -1,0 +1,76 @@
+{
+  "companies": [
+    {
+      "id": "tcs",
+      "name": "TCS",
+      "roles": [
+        {
+          "title": "Backend Developer",
+          "requiredSkills": ["Java", "SQL", "REST API", "Spring Boot"],
+          "preferredSkills": ["Git", "Docker", "CI/CD", "Testing"],
+          "importance": { "Java": 10, "SQL": 9, "REST API": 8, "Spring Boot": 8, "Git": 6, "Docker": 5, "CI/CD": 4, "Testing": 5 }
+        }
+      ]
+    },
+    {
+      "id": "infosys",
+      "name": "Infosys",
+      "roles": [
+        {
+          "title": "Full Stack Developer",
+          "requiredSkills": ["Java", "JavaScript", "SQL", "React", "REST API"],
+          "preferredSkills": ["Spring Boot", "Node.js", "Git", "Docker", "AWS"],
+          "importance": { "Java": 9, "JavaScript": 9, "SQL": 8, "React": 8, "REST API": 8, "Spring Boot": 7, "Node.js": 6, "Git": 6, "Docker": 5, "AWS": 4 }
+        }
+      ]
+    },
+    {
+      "id": "wipro",
+      "name": "Wipro",
+      "roles": [
+        {
+          "title": "Python Developer",
+          "requiredSkills": ["Python", "SQL", "REST API", "Git"],
+          "preferredSkills": ["Django", "FastAPI", "Docker", "AWS", "Testing"],
+          "importance": { "Python": 10, "SQL": 8, "REST API": 8, "Git": 6, "Django": 6, "FastAPI": 6, "Docker": 5, "AWS": 4, "Testing": 5 }
+        }
+      ]
+    },
+    {
+      "id": "zoho",
+      "name": "Zoho",
+      "roles": [
+        {
+          "title": "Java Developer",
+          "requiredSkills": ["Java", "SQL", "Problem Solving", "System Design"],
+          "preferredSkills": ["REST API", "Git", "Testing", "Data Analysis"],
+          "importance": { "Java": 10, "SQL": 9, "Problem Solving": 9, "System Design": 8, "REST API": 7, "Git": 6, "Testing": 6, "Data Analysis": 4 }
+        }
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "roles": [
+        {
+          "title": "Backend Developer",
+          "requiredSkills": ["Java", "System Design", "AWS", "SQL", "REST API"],
+          "preferredSkills": ["Docker", "Kubernetes", "Microservices", "CI/CD", "Problem Solving", "Testing"],
+          "importance": { "Java": 10, "System Design": 10, "AWS": 9, "SQL": 8, "REST API": 8, "Docker": 7, "Kubernetes": 6, "Microservices": 7, "CI/CD": 6, "Problem Solving": 9, "Testing": 7 }
+        }
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "roles": [
+        {
+          "title": "Software Engineer",
+          "requiredSkills": ["Python", "Java", "System Design", "Problem Solving"],
+          "preferredSkills": ["Go", "Kubernetes", "Machine Learning", "CI/CD", "Testing", "SQL"],
+          "importance": { "Python": 9, "Java": 9, "System Design": 10, "Problem Solving": 10, "Go": 6, "Kubernetes": 6, "Machine Learning": 5, "CI/CD": 6, "Testing": 7, "SQL": 7 }
+        }
+      ]
+    }
+  ]
+}

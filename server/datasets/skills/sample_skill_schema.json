@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SkillTaxonomyEntry",
+  "description": "Standard schema for skill taxonomy entries in Career Compass AI",
+  "type": "object",
+  "properties": {
+    "skill_id": { "type": "string", "example": "skill_py_001" },
+    "name": { "type": "string", "example": "Python" },
+    "category": { "type": "string", "example": "Programming Languages" },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Python 3", "Python3", "Py"]
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["python", "pandas", "numpy", "django", "flask", "fastapi"]
+    },
+    "parent_skill": { "type": ["string", "null"], "example": null },
+    "skill_type": { "type": "string", "enum": ["technical", "soft", "process"], "example": "technical" },
+    "description": { "type": "string", "example": "High-level interpreted programming language widely used in AI and web development." }
+  },
+  "required": ["name", "category", "aliases", "keywords", "skill_type"]
+}

@@ -1,0 +1,55 @@
+{
+  "datasetName": "Controlled Benchmark Dataset",
+  "version": "1.0.0",
+  "description": "Curated synthetic benchmark cases for evaluating skill extraction, JD parsing, semantic matching, ATS scoring, skill gap analysis, project recommendation, mock assessment selection, and adaptive learning roadmaps.",
+  "cases": [
+    {
+      "id": "CASE-001-BACKEND-DEV",
+      "category": "Backend Engineering",
+      "resumeText": "JOHN DOE\nBackend Developer with 3 years of experience.\nSkills: Python, FastAPI, PostgreSQL, Git, Docker, REST API.\nExperience: Software Engineer at TechCorp (2022-2025). Built RESTful microservices in Python and FastAPI.\nEducation: B.Tech in Computer Science.",
+      "jdText": "Senior Backend Developer\nWe are looking for a Senior Backend Developer.\nRequired skills: Python, FastAPI, PostgreSQL, Docker, AWS.\nPreferred skills: Kubernetes, Redis.\nExperience with Java is not required.\nExperience: 3+ years in backend engineering.\nEducation: B.Tech / B.E. in Computer Science.",
+      "groundTruth": {
+        "resumeSkills": ["Python", "FastAPI", "PostgreSQL", "Git", "Docker", "REST API"],
+        "jdRequiredSkills": ["Python", "FastAPI", "PostgreSQL", "Docker", "AWS"],
+        "jdPreferredSkills": ["Kubernetes", "Redis"],
+        "jdNegatedSkills": ["Java"],
+        "matchedRequiredSkills": ["Python", "FastAPI", "PostgreSQL", "Docker"],
+        "missingRequiredSkills": ["AWS"],
+        "missingPreferredSkills": ["Kubernetes", "Redis"],
+        "expectedTopProjectGap": "AWS"
+      }
+    },
+    {
+      "id": "CASE-002-FRONTEND-DEV",
+      "category": "Frontend Engineering",
+      "resumeText": "JANE SMITH\nFrontend Web Developer.\nSkills: JavaScript, React, HTML5, CSS3, Tailwind CSS.\nExperience: Developed interactive web dashboards using React and JavaScript.\nEducation: Bachelor of Science in Information Technology.",
+      "jdText": "Frontend Developer\nRequired: JavaScript, React, TypeScript, HTML, CSS.\nPreferred: Next.js, Redux.\nExperience: 2+ years of frontend experience.",
+      "groundTruth": {
+        "resumeSkills": ["JavaScript", "React", "HTML", "CSS", "Tailwind CSS"],
+        "jdRequiredSkills": ["JavaScript", "React", "TypeScript", "HTML", "CSS"],
+        "jdPreferredSkills": ["Next.js", "Redux"],
+        "jdNegatedSkills": [],
+        "matchedRequiredSkills": ["JavaScript", "React", "HTML", "CSS"],
+        "missingRequiredSkills": ["TypeScript"],
+        "missingPreferredSkills": ["Next.js", "Redux"],
+        "expectedTopProjectGap": "TypeScript"
+      }
+    },
+    {
+      "id": "CASE-003-AI-ML-ENG",
+      "category": "AI/ML Engineering",
+      "resumeText": "ALEX JOHNSON\nMachine Learning Engineer.\nSkills: Python, PyTorch, Scikit-learn, SQL, Pandas, NumPy.\nExperience: Built predictive ML models and computer vision pipelines.\nEducation: M.Sc in Data Science.",
+      "jdText": "AI/ML Engineer\nRequired: Python, Machine Learning, PyTorch, Scikit-learn, MLOps.\nPreferred: Docker, FastAPI, Generative AI.\nNote: Experience with PHP is not required.",
+      "groundTruth": {
+        "resumeSkills": ["Python", "PyTorch", "Scikit-learn", "SQL", "Pandas", "NumPy", "Machine Learning"],
+        "jdRequiredSkills": ["Python", "Machine Learning", "PyTorch", "Scikit-learn", "MLOps"],
+        "jdPreferredSkills": ["Docker", "FastAPI", "Generative AI"],
+        "jdNegatedSkills": ["PHP"],
+        "matchedRequiredSkills": ["Python", "Machine Learning", "PyTorch", "Scikit-learn"],
+        "missingRequiredSkills": ["MLOps"],
+        "missingPreferredSkills": ["Docker", "FastAPI", "Generative AI"],
+        "expectedTopProjectGap": "MLOps"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ResumeJdPairDatasetEntry",
+  "description": "Standard schema for ground-truth resume-to-JD match pairs for semantic model fine-tuning",
+  "type": "object",
+  "properties": {
+    "pair_id": { "type": "string", "example": "pair_001" },
+    "resume_id": { "type": "string", "example": "res_sample_001" },
+    "jd_id": { "type": "string", "example": "jd_sample_001" },
+    "match_score": { "type": "number", "example": 85.0 },
+    "skill_coverage": { "type": "number", "example": 80.0 },
+    "label": { "type": "string", "enum": ["Strong Fit", "Moderate Fit", "Weak Fit", "Unsuited"], "example": "Strong Fit" },
+    "matched_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Python", "FastAPI", "PostgreSQL"]
+    },
+    "missing_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": ["Docker", "Redis"]
+    }
+  },
+  "required": ["pair_id", "resume_id", "jd_id", "match_score", "label"]
+}
